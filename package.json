@@ -1,7 +1,7 @@
 {
-  "name": "generic-ble-scanner",
-  "version": "1.1.1",
-  "description": "generic-ble-scanner: An Ionic project",
+  "name": "ionic-ble-scanner",
+  "version": "1.0.0",
+  "description": "An Ionic 1 application that uses the Cordova plugins to scan for BLE beacons",
   "devDependencies": {
     "gulp": "^3.5.6",
     "gulp-clean-css": "^3.7.0",
@@ -19,6 +19,11 @@
     "cordova-plugin-dialogs"
   ],
   "cordovaPlatforms": [
-    "android@6.2.1"
+    "android@6.2.1",
+    {
+      "platform": "android",
+      "version": "6.2.1",
+      "locator": "android@6.2.1"
+    }
   ]
 }
