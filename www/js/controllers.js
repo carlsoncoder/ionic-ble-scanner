@@ -21,6 +21,10 @@ angular.module('blescanner.controllers', [])
     {
       name: "Gimbal",
       uuid: "6E7222B3-ED60-499E-B429-445C35B06CA0"
+    },
+    {
+      name: "Estimote",
+      uuid: "E585A54C-8B03-4F5C-B507-7751A5E0D4C1"
     }
   ];
 
