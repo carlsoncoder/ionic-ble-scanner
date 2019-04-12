@@ -1,0 +1,24 @@
+<ion-view view-title="BLE Scanner">
+  <ion-content>
+    <div style="padding:10px;">
+      <h4 ng-show="isLoading">Scanning for {{beaconType}} beacons:</h4>      
+      <h4 ng-show="!isLoading">Showing results for {{beaconType}} beacons:</h4>
+      <h4 style="color:red;" ng-show="isLoading">{{loadingStatus}}</h4>
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="beacon in beacons" type="item-text-wrap">
+        <h2><b>UUID:    </b>{{beacon.uuid}}</h2>
+        <h2><b>Major:    </b>{{beacon.major}}</h2>
+        <h2><b>Minor:    </b>{{beacon.minor}}</h2>
+        <h2><b>Proximity:    </b>{{beacon.proximity}}</h2>
+        <h2><b>RSSI:    </b>{{beacon.rssi}}</h2>
+        <h2><b>TX:    </b>{{beacon.tx}}</h2>
+        <h2><b>Accuracy:    </b>{{beacon.accuracy}}</h2>
+      </ion-item>
+    </ion-list>
+    <h4 style="padding:10px;" ng-show="!isLoading && beacons.length === 0">No beacons were found</h4>
+    <br />
+    <br />
+    <button ng-show="!isLoading" class="button button-positive button-block" ng-click="rescanBeacons()">Re-Scan</button>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view view-title="BLE UUID Entry">
+    <ion-content>
+        <ion-item class="item-input item-select">
+            <div class="input-label">Select UUID:</div>
+            <select ng-model="beaconConfiguration" 
+                    ng-change="setSelected(beaconConfiguration)"
+                    ng-options="beaconConfiguration.name for beaconConfiguration in beaconConfigurations track by beaconConfiguration.name">
+            </select>
+        </ion-item>
+        <button class="button button-positive button-block" ng-click="scan()">Scan</button>
+        <button class="button button-royal button-block" ng-click="continuousScan()">Continuous Scan</button>
+    </ion-content>
+</ion-view>
